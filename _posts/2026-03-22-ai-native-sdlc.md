@@ -18,7 +18,7 @@ The mistake isn't skepticism. The mistake is letting skepticism become a conclus
 
 ### There's no one right way to adopt
 
-Many blog posts hand you a neat adoption framework with phases and gates. I'm not going to do that, because it would be dishonest. We didn't follow one. What we did instead was establish a few principles: 
+Many blog posts hand you a neat adoption framework with phases and gates. I'm not going to do that, because it would be dishonest. We didn't follow one. What we did instead was **establish a few principles**: 
 
 * We would try AI-native practices across real work, not sandboxed experiments. Toy problems produce toy insights.
 
