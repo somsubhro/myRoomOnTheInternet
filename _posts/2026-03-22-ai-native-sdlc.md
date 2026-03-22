@@ -10,6 +10,8 @@ The adoption wasn't always organic. There was skepticism — some of it well-fou
 But we felt strongly that you can't evaluate a new way of working from the sidelines. 
 You have to get your hands dirty, see what works, see what doesn't, and figure out what needs to change. Trying is the strategy.
 
+One note before we go further: I'm intentional about not sharing specific metrics in this post. Numbers stripped of context get passed around as evidence for conclusions they were never meant to support. What I can share is the shape of what we did and learned. Those are more useful to another team figuring out their own path than any percentage would be.
+
 ### The skepticism is real — and it's not unreasonable
 
 Let me be clear about something upfront: the skepticism around AI-assisted development (or anything) isn't irrational. When someone on your team says "I tried XXXXX and it hallucinated an API that doesn't exist," they're not being a Luddite. They're reporting a real experience. When a senior engineer says "I'm faster without it," they might be right — for now, for their workflow, for the kind of work they do.
