@@ -65,3 +65,27 @@ graph BT
     L1 -->|"evaluate and adapt"| L2
     L2 -->|"codify and share"| L3
 ```
+
+### What surprised us
+
+Getting past the initial skepticism was one challenge. What surprised us was that the harder challenge came after — getting consistent adoption across the team.
+
+Everyone agreed to give AI-native practices a try. That alignment was real. But what "trying" looked like varied from person to person. Some engineers went deep — they had AI agents running on cron jobs, automating parts of their workflow that the rest of us hadn't even thought to touch. Others were still at the surface: using an assistant for occasional code generation, maybe summarizing a document here and there.
+
+The gap between those two ends of the spectrum was wider than we expected. And the instinct, especially for a manager, is to want to close that gap — to nudge everyone toward the power-user end. We deliberately didn't do that. Neither end was wrong. The engineer running cron jobs wasn't more virtuous than the one dabbling. They had different comfort levels, different workflows, different kinds of work. 
+
+What we did instead was carry out regular retros with honest observations. No judgment about who was using what — just sharing what was working, what wasn't, and what people were noticing. Over time, those retros did more to move adoption forward than any mandate could have. When someone hears a peer say "this saved me two hours on Thursday," it lands differently than when a manager says "you should try this tool."
+
+### What we'd do differently
+
+For our team, in our context, with the kind of work we do — we should have started sooner.
+
+**That's not a universal prescription**. A team with a different risk profile, a different product surface, or a different mix of experience levels might reasonably reach a different conclusion. But for us — a small team of builders, having autonomy on our engineering culture, and inclined toward experimentation — the months we spent observing from a distance before committing to hands-on adoption were months we could have been learning. The institutional knowledge we've built in the past several months would have compounded further if we'd started building it earlier.
+
+The hesitation wasn't irrational at the time. The tools were less mature, the organizational support was thinner, and the skepticism felt like prudence.
+
+### The case for going first
+
+In T.S. Eliot's *The Love Song of J. Alfred Prufrock*, the narrator asks: "Do I dare disturb the universe?" He's paralyzed — not by a lack of information, but by the fear that acting might make things worse. So he does nothing. He measures his life in coffee spoons. He watches the moment of possibility pass him by. The poem isn't a cautionary tale about recklessness. It's a cautionary tale about the cost of never trying.
+
+I urge you to try.
