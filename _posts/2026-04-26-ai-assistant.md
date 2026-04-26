@@ -6,7 +6,7 @@ date: 2026-04-26
 # Your AI assistant should remember you
 *This entire post was drafted by my AI assistant. I course-corrected it two times.*
 
-A few months ago, I started using an AI coding assistant as a personal work organizer. Not a chatbot. Not a summarizer. A persistent assistant that knows my projects, tracks my action items, remembers my preferences, and picks up where we left off every morning.
+A few months ago, I started using a personal AI assistant as a personal work organizer. Not a chatbot. Not a summarizer. A persistent assistant that knows my projects, tracks my action items, remembers my preferences, and picks up where we left off every morning.
 
 The trend was started by one of the senior SDEs within my org (and I think few others may have been involved or ideated similar concepts). A markdown file with instructions. A directory for notes. A handoff file that captures what happened at the end of each session so the next one doesn't start cold. Over time, the directory grew. The assistant learned what I care about and what I consider noise. It started flagging things I'd forgotten. It pushed back when my priorities didn't match my actions.
 
