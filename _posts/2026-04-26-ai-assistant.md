@@ -44,7 +44,7 @@ The whole thing is about 800 lines of markdown instructions and a 200-line shell
 
 ### Why markdown
 
-I get asked this a lot. Why not a database? Why not a vector store? Why not a proper memory system with embeddings and retrieval?
+Why not a database? Why not a vector store? Why not a proper memory system with embeddings and retrieval?
 
 Because markdown files are debuggable. You can open them, read them, edit them, version them. When the assistant does something wrong, you can look at the file it read and understand why. When you want to change how it behaves, you edit a text file (or better yet - tell the assistant to fix it). There's no abstraction layer between you and the assistant's state.
 
