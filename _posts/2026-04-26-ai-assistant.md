@@ -3,7 +3,6 @@ title: "Your AI assistant should remember you"
 date: 2026-04-26
 ---
 
-# Your AI assistant should remember you
 *This entire post was drafted by my AI assistant. I course-corrected it two times.*
 
 A few months ago, I started using a personal AI assistant as a personal work organizer. Not a chatbot. Not a summarizer. A persistent assistant that knows my projects, tracks my action items, remembers my preferences, and picks up where we left off every morning.
