@@ -2,7 +2,7 @@
 title: Hello 👋🏽
 ---
 
-I am presently a Software Development Manager and [Bar Raiser](https://www.aboutamazon.com/news/workplace/amazon-bar-raiser) at AWS. Me and my team work on [AWS Cost Management](https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html) services. I write about my learnings in delivering and operating software, AWS, and about engineering culture that energizes customer focused delivery everyday.
+I am presently a Software Development Manager and [Bar Raiser](https://www.aboutamazon.com/news/workplace/amazon-bar-raiser) at AWS. Me and my team are building and operating an AI capability authoring, evaluation, packaging platform for [AWS Billing and Cost Management](https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html) services so that teams can ship AI capabilities through our frontier agents (like the AWS FinOpsAgent) to their customers. I write about my learnings in delivering and operating software, AWS, and about engineering culture that energizes customer focused delivery everyday.
 
 I like simplicity in software and in things outside of work. I try to be intentional in building [primitives](https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2023-letter-to-shareholders#:~:text=%E2%80%9CPrimitives%20are%20the,freedom%20and%20innovation.%E2%80%9D). 
 
