@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      {%- if site.posts.size > 0 -%}
+      <div class="wrapper has-toc{% if page.url == "/" %} is-home{% endif %}">
+        <div class="toc-content">
+          {{ content }}
+        </div>
+        {%- include post-toc.html -%}
+      </div>
+      {%- else -%}
+      <div class="wrapper">
+        {{ content }}
+      </div>
+      {%- endif -%}
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
