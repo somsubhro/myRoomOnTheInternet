@@ -3,77 +3,32 @@ title: "Is AI replacing your engineering instinct?"
 date: 2026-10-05
 ---
 
-Earlier in the spring, I had asked a [question](https://somsubhro.github.io/myRoomOnTheInternet/2026/04/26/ai-assistant.html#:~:text=But%20what%20about%20someone%20who%E2%80%99s%20never%20done%20the%20work%20without%20AI%3F%20If%20your%20first%20experience%20of%20project%20tracking%20is%20an%20AI%20that%20does%20it%20for%20you%2C%20do%20you%20develop%20the%20instincts%20to%20know%20when%20it%E2%80%99s%20tracking%20the%20wrong%20things%3F)): "But what about someone who's never done the work without AI? If your first experience of < insert > is an AI that does it for you, do you develop the instincts to know when it's [doing] the wrong things?"
+In an earlier post, I asked a question that has stayed with me:
 
-I have been observing engineering teams embrace AI native software development during the past year+. Engineers who were delivering software from before this shift are doing well. Engineers without the experience of building software before AI are getting hurt. I am worried about that.
+*If your first experience of doing something is with AI doing most of the work, do you ever develop the instincts to know when it's getting things wrong?*
 
-Before going further, I will set a shared context for what I mean by AI native software development. The software delivery loop has not changed. We still start from a customer need, develop it into specs or prompts, package that into code, deploy it, operate it, and let what we learn in production feed back into the next increment. What has changed is that agents (and MCPs, steerings, and other vectors) are now in these loops with humans collaborating to deliver consequential production software.
+Experienced engineers often recognize when something doesn't feel right. A design might look reasonable, the code might pass every test, and yet something makes them uncomfortable. Perhaps it's an unnecessary abstraction, a hidden dependency, a familiar failure mode, or an unwritten understanding of how customers actually use the product. I call this engineering instinct.
 
-```
-Why am I worried about engineers who started their careers in the AI-native era?
-│
-└─ Because some of them accept their AI agent's reasoning at face value -
-   satisficing without a calibrated bar for when "good enough" is actually good enough.
-   │
-   └─ Why do they accept it at face value?
-      │
-      └─ Because they haven't built the expert judgement to interrogate the smell,
-         correlation, coherence, correctness checks.
-         │
-         └─ Why haven't they built that judgement?
-            │
-            └─ Because judgement is forged by making mistakes, and getting corrected by reality or a senior. 
-               The AI-native loop hides the mistakes behind plausible, usually-working output.
-               It removes the forcing function that builds judgement.
-               │
-               └─ Why is that forcing function missing?
-                  │
-                  └─ Because AI tools are optimized to produce an answer, not to
-                     surface the engineer's wrong turns. So error signals that 
-                     calibrates judgement never occurs.
-                     │
-                     └─ Why are the tools optimized that way, and used from day one?
-                        │
-                        └─ Because employers, in a race for productivity and efficiency,
-                           chose AI-native development and the speed it promises.
-                           │
-                           └─ Why are employers racing for productivity in the first place?
-                              │
-                              └─ Because the market rewards shipping speed over craft —
-                                 investors, competitors, and customers all price velocity.
-                                 │
-                                 └─ Why does the market reward velocity over craft?
-                                    │
-                                    └─ Because the cost of low judgement is deferred and
-                                       diffuse. Those surface later as incidents, rework, and
-                                       fragile systems while the benefit of speed is
-                                       immediate and legible.
-```
+But where does it come from?
 
-The bill for missing judgement comes due later and typically becomes someone else's problem. And the loop reinforces itself. Lacking judgement → can't evaluate AI tool output → defer to the agent → never build judgement → lacking judgement...
-       
-```
+I believe it develops through years of making decisions, getting things wrong, understanding why, and applying those lessons. For a curious engineer, **the feedback loop is also the learning loop.**
 
-These aren't the root cause, but they deepen the problem:
-```
-│
-├─ Engineer-side agency
-│  └─ Some engineers, given capable AI tools, choose not to learn the
-│     traditional way — why invest in the hard path when the easy one ships?
-│
-├─ The "village's experience" trap
-│  └─ Engineers trust the model because it's trained on a huge corpus —
-│     a village's collective experience. But a statistical consensus of
-│     what's common is not the same as what's correct here, now, for this system.
-│
-└─ Judgement is invisible on a dashboard
-   └─ You can measure PRs merged; you can't easily measure disasters avoided.
-      Because judgement is tacit — intuition, not artifact — organizations
-      under-invest in what they can't put on a scoreboard.
-```
-  Is any of this a problem?
+**What happens when AI starts removing much of that feedback loop?**
 
-  Code writing -> correction loop is shortened
-  For someone who is curious, they won't have a problem
-  How about we learn on the job while using the AI tools
-  Will the underlying models get so much better that we won't need to worry about all this
+An engineer can now describe a problem, have an agent design a solution, generate the implementation, and write tests. The result might work perfectly. But did the engineer understand why that design was chosen? Could they recognize a flawed assumption? Would they know when the same solution shouldn't be used?
+
+I think **the ability to produce software is becoming increasingly disconnected from the ability to understand it.**
+
+Of course, we've always built on abstractions. Engineers don't need to understand how a database engine works to use a database. Why should AI be different?
+
+AI doesn't just abstract implementation details. It increasingly makes engineering decisions on our behalf. Evaluating those decisions requires the very judgment we may no longer be developing.
+
+There's a compelling counterargument. AI could accelerate learning. Curious engineers can explore more designs, question more assumptions, and experiment with unfamiliar systems. I believe that too. But curiosity alone doesn't guarantee learning, and delivering working software doesn't necessarily demonstrate understanding.
+
+This creates a problem for engineering leaders. We measure how much faster engineers deliver with AI. But are we paying equal attention to whether they're developing the judgment to evaluate its output?
+
+Perhaps future AI systems will become so reliable that much of today's engineering instinct becomes unnecessary. That's possible. But we're not there yet.
+
+On my team, we still encourage newer engineers to build fundamentals through developer guides and bootcamps, reason through design and code decisions, and participate actively in design discussions and reviews. These conversations force engineers to explain their thinking, challenge assumptions, and answer questions in real time. On-call experience remains equally important. We have AI tools to inspect logs, correlate events, and reason about failures. But understanding an incident's impact, deciding how to respond, and experiencing the consequences of engineering decisions continue to build judgment.
+
+I don't believe restricting AI is the answer. But I also don't know if our current approaches are enough. We're largely relying on the same methods we've always used to develop engineers, while the way they build software is changing dramatically.
