@@ -13,9 +13,9 @@ First, I wanted to understand the protocol itself. What does A2A carry between t
 
 Second, I wanted to know what this means for evals. To evaluate an agent properly, I need its traces. I need to see what it reasoned, which tools it called, and what those tools returned. A final answer alone tells me whether the agent was right. It does not tell me why.
 
-A2A is designed so that agents are opaque to each other. By default, Agent 2 does not share its memory, its tools or its internal state with Agent 1. So I expected that Agent 2's traces would not be visible from Agent 1's side. I want to know how hard it is to set up an eval across both agents, and what extra scaffolding that takes.
+Third, I wanted to know if teams can build agents that work together without ever talking to each other. That needs a contract about how each agent behaves. In traditional software, API contracts largely solve this. I wanted to see if A2A does the same.
 
-Third, I wanted to know if teams can build agents that work together without ever talking to each other. That needs a contract about how each agent behaves. In traditional software, API contracts largely solve this. I wanted to see if A2A does the same. I answer this in [Can separate teams keep a contract between agents?](#can-separate-teams-keep-a-contract-between-agents)
+A2A is designed so that agents are opaque to each other. By default, Agent 2 does not share its memory, its tools or its internal state with Agent 1. So I expected that Agent 2's traces would not be visible from Agent 1's side. I want to know how hard it is to set up an eval across both agents, and what extra scaffolding that takes.
 
 <div class="rc-card">
   <p class="rc-card-title">Results so far</p>
