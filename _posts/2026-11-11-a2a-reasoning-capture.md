@@ -15,6 +15,8 @@ Second, I wanted to know what this means for evals. To evaluate an agent properl
 
 A2A is designed so that agents are opaque to each other. By default, Agent 2 does not share its memory, its tools or its internal state with Agent 1. So I expected that Agent 2's traces would not be visible from Agent 1's side. I want to know how hard it is to set up an eval across both agents, and what extra scaffolding that takes.
 
+Third, I wanted to know if teams can build agents that work together without ever talking to each other. That needs a contract about how each agent behaves. In traditional software, API contracts largely solve this. I wanted to see if A2A does the same. I answer this in [Can separate teams keep a contract between agents?](#can-separate-teams-keep-a-contract-between-agents)
+
 <div class="rc-card">
   <p class="rc-card-title">Results so far</p>
   <div class="rc-grid rc-grid--2x2">
