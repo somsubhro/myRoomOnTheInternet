@@ -15,7 +15,21 @@ Second, I wanted to know what this means for evals. To evaluate an agent properl
 
 Third, I wanted to know if teams can build agents that work together without ever talking to each other. That needs a contract about how each agent behaves. In traditional software, API contracts largely solve this. I wanted to see if A2A does the same.
 
-A2A is designed so that agents are opaque to each other. By default, Agent 2 does not share its memory, its tools or its internal state with Agent 1. So I expected that Agent 2's traces would not be visible from Agent 1's side. I want to know how hard it is to set up an eval across both agents, and what extra scaffolding that takes.
+### The setup
+
+```
+User  ⇄  Agent 1 (the agent users interact with)
+              ⇅  A2A
+         Agent 2 (a specialist agent: Nordic population stats)
+```
+
+The system has two agents. Agent 1 (the agent users interact with) receives every user message. When it needs specialist work, it delegates to Agent 2 (a specialist agent) over A2A. A2A is designed so that agents are opaque to each other. By default, Agent 2 does not share its memory, its tools or its internal state with Agent 1. So I expected that Agent 2's traces would not be visible from Agent 1's side. I want to know how hard it is to set up an eval across both agents, and what extra scaffolding that takes.
+
+I used the official A2A Python SDK (version 1.3.0). Agent 2 answers questions about Nordic populations. It has two tools: `lookup_fact` and `calculate`. It works in a loop. It thinks, calls a tool, reads the result, and repeats until it can answer.
+
+Agent 2 writes every step to a log. That log is the full trace an eval would want - this is an expected trace setup also referred to as the agent's trajectory. Agent 1 records everything it receives (this setup is not a norm - I wanted this to prove my hypothesis), including the raw HTTP traffic. Comparing the two shows exactly what crosses between them.
+
+In the first three experiments, Agent 2 follows a script instead of using a language model. I did this so the results are repeatable and cost nothing. In the fourth experiment, Agent 2 runs on Claude.
 
 <div class="rc-card">
   <p class="rc-card-title">Results so far</p>
@@ -26,24 +40,6 @@ A2A is designed so that agents are opaque to each other. By default, Agent 2 doe
     <div class="rc-tile"><span class="rc-tag">e04</span><div class="rc-num">11 / 12</div><div class="rc-label">times Claude without memory asked for help instead of guessing. One wrong answer still got through.</div></div>
   </div>
 </div>
-
-
-
-### The setup
-
-```
-User  ⇄  Agent 1 (the agent users interact with)
-              ⇅  A2A
-         Agent 2 (a specialist agent: Nordic population stats)
-```
-
-The system has two agents. Agent 1 (the agent users interact with) receives every user message. When it needs specialist work, it delegates to Agent 2 (a specialist agent) over A2A.
-
-I used the official A2A Python SDK (version 1.3.0). Agent 2 answers questions about Nordic populations. It has two tools: `lookup_fact` and `calculate`. It works in a loop. It thinks, calls a tool, reads the result, and repeats until it can answer.
-
-Agent 2 writes every step to a log. That log is the full trace an eval would want - this is an expected trace setup also referred to as the agent's trajectory. Agent 1 records everything it receives (this setup is not a norm - I wanted this to prove my hypothesis), including the raw HTTP traffic. Comparing the two shows exactly what crosses between them.
-
-In the first three experiments, Agent 2 follows a script instead of using a language model. I did this so the results are repeatable and cost nothing. In the fourth experiment, Agent 2 runs on Claude.
 
 ### Experiment 1: what does Agent 1 see of Agent 2's work?
 
