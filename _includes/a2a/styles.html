@@ -1,0 +1,137 @@
+<style>
+  /* Styles for the A2A experiments post: results cards (.rc-*) and the growth chart (.viz-*).
+     The site (minima classic) is light-only, so these are light-only too. */
+  .rc-card, .viz {
+    --a2a-surface: #fcfcfb;
+    --a2a-border: #e8e8e6;
+    --a2a-text: #111111;
+    --a2a-text-2: #52514e;
+    --a2a-text-3: #828282;
+    --a2a-series-1: #2a78d6; /* stateful  (categorical slot 1, validated with slot 2) */
+    --a2a-series-2: #eb6834; /* stateless (categorical slot 2) */
+  }
+
+  /* ---------- results cards ---------- */
+  .rc-card {
+    background: var(--a2a-surface);
+    border: 1px solid var(--a2a-border);
+    border-radius: 10px;
+    padding: 18px 20px 14px;
+    margin: 24px 0;
+  }
+  .rc-card-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--a2a-text-3);
+    margin: 0 0 12px;
+  }
+  .rc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px 20px;
+  }
+  .rc-grid--2x2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 420px) { .rc-grid, .rc-grid--2x2 { grid-template-columns: minmax(0, 1fr); } }
+  .rc-tile { min-width: 0; }
+  .rc-num {
+    font-size: 1.9rem;
+    line-height: 1.1;
+    font-weight: 600;
+    color: var(--a2a-text);
+    font-variant-numeric: tabular-nums;
+  }
+  .rc-label {
+    font-size: 0.85rem;
+    line-height: 1.35;
+    color: var(--a2a-text-2);
+    margin-top: 4px;
+  }
+  .rc-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--a2a-text-2);
+    border: 1px solid var(--a2a-border);
+    border-radius: 999px;
+    padding: 1px 8px;
+    margin-bottom: 6px;
+  }
+  .rc-foot {
+    font-size: 0.78rem;
+    color: var(--a2a-text-3);
+    margin: 12px 0 0;
+  }
+
+  /* ---------- growth chart ---------- */
+  .viz {
+    background: var(--a2a-surface);
+    border: 1px solid var(--a2a-border);
+    border-radius: 10px;
+    padding: 18px 20px 14px;
+    margin: 24px 0;
+  }
+  .viz-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+  .viz-title { font-weight: 600; color: var(--a2a-text); margin: 0; font-size: 1rem; }
+  .viz-sub { color: var(--a2a-text-2); font-size: 0.85rem; margin: 2px 0 0; }
+  .viz-legend { display: flex; gap: 14px; font-size: 0.82rem; color: var(--a2a-text-2); margin: 12px 0 8px; padding: 0; list-style: none; }
+  .viz-legend li { display: flex; align-items: center; gap: 6px; margin: 0; }
+  .viz-swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+  .viz-replay {
+    font: inherit; font-size: 0.8rem; color: var(--a2a-text-2);
+    background: transparent; border: 1px solid var(--a2a-border); border-radius: 999px;
+    padding: 3px 10px; cursor: pointer;
+  }
+  .viz-replay:hover { color: var(--a2a-text); border-color: var(--a2a-text-3); }
+  .viz-rows { margin: 0; padding: 0; list-style: none; }
+  .viz-row {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    padding: 3px 0;
+    margin: 0;
+  }
+  .viz-turn { font-size: 0.78rem; color: var(--a2a-text-3); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .viz-bars { display: grid; gap: 2px; }
+  .viz-bar { display: flex; align-items: center; gap: 6px; height: 9px; }
+  .viz-fill {
+    height: 100%;
+    width: var(--w);
+    min-width: 3px;
+    border-radius: 0 4px 4px 0; /* rounded data end, square at the baseline */
+    transform-origin: left center;
+  }
+  .viz-bar.s1 .viz-fill { background: var(--a2a-series-1); }
+  .viz-bar.s2 .viz-fill { background: var(--a2a-series-2); }
+  .viz-val { font-size: 0.7rem; line-height: 1; color: var(--a2a-text-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .viz-row:hover .viz-turn, .viz-row:hover .viz-val { color: var(--a2a-text); }
+  .viz-note { font-size: 0.7rem; color: var(--a2a-text-3); margin-left: 4px; }
+  .viz-axis { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; margin-top: 6px; }
+  .viz-axis span { font-size: 0.72rem; color: var(--a2a-text-3); }
+  .viz-table summary { font-size: 0.8rem; color: var(--a2a-text-2); cursor: pointer; margin-top: 10px; }
+  .viz-table table { font-size: 0.8rem; margin-top: 8px; }
+
+  /* Animation: only when JS has marked the chart ready, and only if the reader allows motion.
+     Without JS the bars are simply drawn at full length. */
+  @media (prefers-reduced-motion: no-preference) {
+    .viz.is-ready .viz-fill { transform: scaleX(0); }
+    .viz.is-ready .viz-val, .viz.is-ready .viz-note { opacity: 0; }
+    .viz.is-playing .viz-fill {
+      animation: viz-grow 520ms cubic-bezier(.2, .7, .2, 1) forwards;
+      animation-delay: calc(var(--i) * 230ms);
+    }
+    .viz.is-playing .viz-val, .viz.is-playing .viz-note {
+      animation: viz-fade 240ms ease-out forwards;
+      animation-delay: calc(var(--i) * 230ms + 380ms);
+    }
+  }
+  @keyframes viz-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes viz-fade { from { opacity: 0; } to { opacity: 1; } }
+
+  @media (max-width: 600px) {
+    .rc-num { font-size: 1.6rem; }
+    .viz-row, .viz-axis { grid-template-columns: 52px minmax(0, 1fr); }
+    .viz-note { display: none; }
+  }
+</style>
