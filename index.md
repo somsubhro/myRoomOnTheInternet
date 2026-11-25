@@ -7,7 +7,12 @@ I am presently a Software Development Manager and [Bar Raiser](https://www.about
 I like simplicity in software and in things outside of work. I try to be intentional in building [primitives](https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2023-letter-to-shareholders#:~:text=%E2%80%9CPrimitives%20are%20the,freedom%20and%20innovation.%E2%80%9D). 
 
 ### Contributions
+* [Cost comparisons on AWS Cost Explorer](https://aws.amazon.com/blogs/aws-cloud-financial-management/quick-mom-cost-analysis-with-aws-cost-explorers-new-cost-comparison-feature/)
+* [New AWS Budget metrics and other API improvements](https://aws.amazon.com/blogs/aws-cloud-financial-management/improving-accuracy-for-your-cloud-budgeting-with-new-features-in-aws-budgets/)
+* [Custom time period for AWS Budgets](https://aws.amazon.com/about-aws/whats-new/2025/09/aws-budgets-custom-time-periods/)
 * [General availability of AWS Pricing Calculator](https://aws.amazon.com/blogs/aws-cloud-financial-management/the-authenticated-aws-pricing-calculator-is-now-generally-available/)
+* [Coarse grained to fine grained Billing and Cost Management permission migration](https://aws.amazon.com/blogs/aws-cloud-financial-management/changes-to-aws-billing-cost-management-and-account-consoles-permissions/)
+* [SageMaker Savings Plans launch](https://aws.amazon.com/blogs/aws/slash-your-machine-learning-costs-with-instance-price-reductions-and-savings-plans-for-amazon-sagemaker/?sc_channel=sm&sc_campaign=launch_&sc_publisher=LINKEDIN&sc_country=Global,Global+(Public+Sector+Users),Global+(EMEA+users),Global+(APAC+users),Global+(LATAM+users)&sc_geo=GLOBAL&sc_outcome=awareness&trk=launch__LINKEDIN&linkId=116724147)
 * [Codify your best practices using SCPs - Part 1](https://aws.amazon.com/blogs/mt/codify-your-best-practices-using-service-control-policies-part-1/)
 * [Codify your best practices using SCPs - Part 2](https://aws.amazon.com/blogs/mt/codify-your-best-practices-using-service-control-policies-part-2/)
 * [FSI industry lens - AWS Well-Architected Framework](https://d1.awsstatic.com/whitepapers/architecture/wellarchitected-Financial-Services-Industry-Lens.pdf)
