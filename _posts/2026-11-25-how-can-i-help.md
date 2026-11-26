@@ -1,0 +1,24 @@
+---
+title: "How can I help?"
+date: 2026-11-25
+---
+
+If you're a new grad about to enter software right now, I can see how confusing it is.
+
+Everything around you is loud. One post says AI will make junior engineers obsolete. The next says CS degrees are worthless. It's hard to tell what's real, what's foundational, and what's written for clicks.
+
+Somewhere in all that, those of us already in the industry stopped being useful to the people coming in after us. I'm sorry for my part in that. I'd like to help fix it where I can.
+
+I've been building software for about 20 years. Views shared will be my own. I can't speak for every company, but I can share principles that hold up, and I know Amazon's process best. Here's what I can help with:
+
+* What to focus on when preparing for interviews
+* What to expect in the interview itself
+* How to think about technical design
+* How to use AI tools while you're learning without skipping the fundamentals
+* Whether entry-level roles are really disappearing, and what's actually changing
+* What to learn while you're still in school
+* What makes an engineer successful over the long run
+
+If what you need isn't on this list, write to me at somchatterjee@duck.com. If I'm not the right person to guide you on a topic, I'll try to connect you with someone who is.
+
+I am committing some time for this and you can find my calendar [here](https://cal.com/somsubhro-chatterjee-nndg3i) to book a time. 
