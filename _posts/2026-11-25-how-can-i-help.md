@@ -11,11 +11,10 @@ Somewhere in all that, those of us already in the industry stopped being useful 
 
 I've been building software for about 20 years and an Amazon Bar Raiser. Views shared will be my own. I can't speak for every company, but I can share principles that hold up, and I know Amazon's process best. Here's what I can help with:
 
-* What to focus on when preparing for interviews
-* What to expect in the interview itself
+* What to focus on when preparing for interviews (I can't speak for every company)
+* What to expect in interviews (I can't speak for every company)
 * How to think about technical design
 * How to use AI tools while you're learning without skipping the fundamentals
-* Whether entry-level roles are really disappearing, and what's actually changing
 * What to learn while you're still in school
 * What makes an engineer successful over the long run
 
