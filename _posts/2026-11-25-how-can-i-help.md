@@ -16,7 +16,7 @@ So here's what I'm going to do. I'm going to make time to talk with new grads on
 * What to learn while you're still in school
 * What makes an engineer successful over the long run
 
-If what you need isn't on this list, write to me at somchatterjee@duck.com. If I'm not the right person to guide you on a topic, I'll try to connect you with someone who is.
+If what you need isn't on this list, write to me at mailto:somchatterjee@duck.com. If I'm not the right person to guide you on a topic, I'll try to connect you with someone who is.
 
 **You can find my calendar [here](https://cal.com/somsubhro-chatterjee-nndg3i) to book time for a chat.** 
 
